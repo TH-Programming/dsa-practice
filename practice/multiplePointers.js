@@ -21,3 +21,44 @@ function sumZero(arr){
     }
     return undefined
 }
+
+//? refactor with pointers =>
+
+function sumZeroRefact(arr){
+    let left = 0
+    let right = arr.length - 1
+    while (left<right){
+        let sum = arr[left] + arr[right]
+        if(sum===0){
+            return([arr[left],arr[right]])
+        } else if(sum > 0){
+            right--
+        } else {
+            left++
+        }
+    }
+}
+
+//? make a function countUniqueValues()
+//?accepts SORTED array, counts unique values.
+//? can be negative values, but will always be sorted
+
+function countUniqueValues(arr){
+    if(arr.length === 0){
+        return counter
+    } else if(arr.length===1) {
+        return 1
+    } else {
+    let point1 = 0
+    let point2 = 1
+    while(point2 < Array.length){
+        if(arr[point2] === arr[point1]){
+            point2++ 
+        } else {
+            ++point1
+            arr[point1] = arr[point2]
+        }
+    }
+    return arr.slice(0, point1)
+    }
+}
