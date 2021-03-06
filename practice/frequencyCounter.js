@@ -77,3 +77,10 @@ function validAnagram(str1, str2){
     }
     return true
   }
+
+  //! Could also complete this challenge
+  //! by using a single count object,
+  //! adding to it from the first string
+  //! subtracting from it from second string
+  //! then all keys === 0 means true, else false
+  
