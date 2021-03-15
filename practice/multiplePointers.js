@@ -45,13 +45,13 @@ function sumZeroRefact(arr){
 
 function countUniqueValues(arr){
     if(arr.length === 0){
-        return counter
+        return 0
     } else if(arr.length===1) {
         return 1
     } else {
     let point1 = 0
     let point2 = 1
-    while(point2 < Array.length){
+    while(point2 < arr.length){
         if(arr[point2] === arr[point1]){
             point2++ 
         } else {
